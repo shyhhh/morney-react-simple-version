@@ -1,22 +1,18 @@
 import Layout from '../components/Layout';
 import React from 'react';
 import styled from 'styled-components';
+import {TagsSection} from './Money/TagsSection';
+import {CategorySection} from './Money/CategorySection';
+import {NotesSection} from './Money/NotesSection';
+import {NumberPadSection} from './Money/NumberPadSection';
 
-const TagsSection = styled.section`
-
-`;
-const NotesSection = styled.section`
-
-`;
-const CategorySection = styled.section`
-
-`;
-const NumberSection = styled.section`
-
-`;
+const MyLayout = styled(Layout)`
+  display:flex;
+  flex-direction: column;
+`
 function Money() {
   return (
-    <Layout>
+    <MyLayout>
       <TagsSection>
         <ol>
           <li>衣</li>
@@ -29,18 +25,20 @@ function Money() {
       <NotesSection>
         <label>
           <span>备注</span>
-          <input type='text' />
+          <input type="text" placeholder="在这里添加备注"/>
         </label>
       </NotesSection>
       <CategorySection>
         <ul>
-          <li>支出</li>
+          <li className="selected">支出</li>
           <li>收入</li>
         </ul>
       </CategorySection>
-      <NumberSection>
-        <div>100</div>
-        <div>
+      <NumberPadSection>
+        <div className="output">
+          100
+        </div>
+        <div className="pad clearfix">
           <button>1</button>
           <button>2</button>
           <button>3</button>
@@ -52,12 +50,12 @@ function Money() {
           <button>7</button>
           <button>8</button>
           <button>9</button>
-          <button>OK</button>
-          <button>0</button>
-          <button>.</button>
+          <button className="ok">OK</button>
+          <button className="zero">0</button>
+          <button className="dot">.</button>
         </div>
-      </NumberSection>
-    </Layout>
+      </NumberPadSection>
+    </MyLayout>
   );
 }
 
