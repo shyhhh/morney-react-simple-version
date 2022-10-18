@@ -35,6 +35,7 @@ const TagsSection: React.FC = () => {
   const onToggleTag = (tag: string) => {
     const index = selectedTags.indexOf(tag)
     if (index >= 0) {
+      console.log(selectedTags)
       setSelectedTags(selectedTags.filter(t => t !== tag))
     } else {
       setSelectedTags([...selectedTags, tag])
