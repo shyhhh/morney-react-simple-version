@@ -23,6 +23,7 @@ const NoteSection: React.FC = () => {
   const [note, setNote] = useState('')
   const refInput = useRef<HTMLInputElement>(null)
   const onBlur = () => {
+    console.log(refInput)
     if (refInput.current !== null) {
       setNote(refInput.current.value)
     }
