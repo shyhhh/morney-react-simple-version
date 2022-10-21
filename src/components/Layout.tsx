@@ -1,10 +1,10 @@
-import Nav from './Nav';
-import React from 'react';
-import styled from 'styled-components';
+import Nav from "./Nav";
+import React from "react";
+import styled from "styled-components";
 
 const Wrapper = styled.div`
   height: 100vh;
-  display:flex;
+  display: flex;
   flex-direction: column;
 `;
 const Main = styled.div`
@@ -14,10 +14,8 @@ const Main = styled.div`
 const Layout = (props: any) => {
   return (
     <Wrapper>
-      <Main className={props.className}>
-        {props.children}
-      </Main>
-      <Nav/>
+      <Main className={props.className}>{props.children}</Main>
+      <Nav />
     </Wrapper>
   );
 };

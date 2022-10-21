@@ -1,5 +1,5 @@
-import Layout from '../components/Layout';
-import React from 'react';
+import Layout from "../components/Layout";
+import React from "react";
 
 function Statistics() {
   return (
@@ -8,6 +8,5 @@ function Statistics() {
     </Layout>
   );
 }
-
 
 export default Statistics;
