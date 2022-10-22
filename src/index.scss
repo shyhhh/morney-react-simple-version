@@ -1,4 +1,4 @@
-@import-normalize ;
+@import-normalize;
 
 @import "helper";
 
@@ -54,4 +54,10 @@ button {
 	display: block;
 	clear: both;
 	content: "";
+}
+
+.oneLine {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
