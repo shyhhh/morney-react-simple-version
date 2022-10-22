@@ -16,10 +16,11 @@ const generateOutput = (text: string, output = "0") => {
         return output + text;
       }
     case ".":
-      if (output.includes(".")) {
+      if (output.indexOf(".") >= 0) {
         return output;
+      } else {
+        return output + ".";
       }
-      return output + ".";
     case "删除":
       if (output.length === 1) {
         return "";
