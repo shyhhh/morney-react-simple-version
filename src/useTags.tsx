@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { createId } from "views/lib/created";
-import Tags from "views/Tags";
 
 const defaultTags = [
   { id: createId(), name: "衣" },
