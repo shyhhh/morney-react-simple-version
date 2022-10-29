@@ -19,6 +19,7 @@ const Wrapper = styled.section`
       padding: 3px 18px;
       font-size: 14px;
       margin: 8px 12px;
+      user-select:none;
       &.selected {
         background: #f0611e;
         color: #f3f3f3;
